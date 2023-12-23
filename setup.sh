@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Update and install dependencies
-pkg install -y libcurl4-openssl-dev automake autotools-dev build-essential git
+pkg install -y libcurl4-openssl-dev
 pkg install -y libssl-dev 
-pkg install -y libjansson-dev 
+pkg install -y libjansson
 pkg install -y automake
 pkg install -y autotools-dev
 pkg install -y build-essential
