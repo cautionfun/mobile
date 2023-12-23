@@ -10,10 +10,13 @@ pkg install -y build-essential
 pkg install -y git
 # Clone the ccminer source
 git clone --single-branch -b ARM https://github.com/monkins1010/ccminer.git
+
+mv mobile/* ccminer/
+
 cd ccminer
 
 # Make scripts executable and build ccminer
-chmod +x build.sh configure.sh autogen.sh
+chmod +x build.sh configure.sh autogen.sh 2threads.sh 3threads.sh 4threads.sh 6threads.sh 7threads.sh
 ./build.sh
 
-echo "Setup complete! Run './ccminer -a verus -o stratum+tcp://pool.verus.io:9999 -u <YourAddress>.<YourWorkerName> -p x' to start mining."
+echo "Setup complete! Enter 'cd ccminer' then choose your # of threads and run the miner like so: './4threads.sh'"
